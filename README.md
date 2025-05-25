@@ -30,10 +30,6 @@ Each stage of the report generation is built as a LangGraph **node**:
 - `generate_answer`: Handles answering each sub-question
 - `compile_report`: Consolidates all answers into a final report, with optional word limits
 
-### Using `Send` for Parallel Execution
-
-```python
-return [Send("generate_answer", {"question": q}) for q in state["questions"]]
 
 ### Workflow Diagram
 
